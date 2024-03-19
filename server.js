@@ -23,8 +23,8 @@ app.post("/about", bodyParser, (req, res, next) => {
   // });
   res.send("<h1>" + req.body.firstName + "</h1>");
 });
-app.get("/profile/:name", (req, res, next) => {
-  res.send(req.params.name);
+app.get("/profile/:name/:id", (req, res, next) => {
+  res.send(req.params.name + " " + req.params.id);
 });
 
 app.listen(5000, () => {
